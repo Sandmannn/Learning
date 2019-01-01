@@ -1,2 +1,2 @@
 # Learning
-Small code projects for exploring variosu technologies
+Small code projects for exploring various technologies
