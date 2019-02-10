@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 import java.util.PriorityQueue;
+import java.util.stream.Stream;
 
 @RestController
 public class HelloController {
 	static PriorityQueue<Integer> q = new PriorityQueue<>();
+	static Stream<Integer> stream = null;
 	
 	
     @GetMapping("/api/hello")
@@ -18,6 +20,13 @@ public class HelloController {
         return "Hello, the time at the server is now " + new Date() + "\n";
     }
 
+    @PostMapping("/api/aggregation/restart")
+    public String restart( @RequestBody Integer value) {
+    	
+    	
+    	
+        return "Injected int is " + value;
+    }
     @PostMapping("/api/median/{value}")
     public String median( @RequestBody Integer value) {
     	
